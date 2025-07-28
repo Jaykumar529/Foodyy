@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default dots */
+.slick-dots li button:before {
+  color: orange !important; /* Change dot color */
+  font-size: 10px !important; 
+  opacity: 0.7;
+  /* transition: all 0.3s ease; */
+  /* transition: all 0.3s 0.7s cubic-bezier(0.25, 1, 0.5, 1);  */
+}
+
+/* Active dot customization */
+.slick-dots li.slick-active button:before {
+  color: darkorange !important;
+  /* font-size: 16px !important;  */
+  width: 28px !important; /* Increase width */
+  height: 15px !important; /* Increase height */
+  border-radius: 10px !important; /* Make it pill-shaped */
+  background-color: darkorange !important; /* Background for active dot */
+  opacity: 1;
+  /* Keeps the dot visible */
+  content: "•"; 
+  display: block;
+}
+
+body {
+  /* background: #69d7ff; */
+  /* background: #000000; */
+
+  background: white;
+  color: aliceblue;
+}
+
+/* -------------start------------- */
+/* 
+.light-mode {
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: inherit; 
+}
+
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+} */
+
+/* ------------end--------------- */
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+
+.carousel-container {
+  position: relative;
+}
+
+.custom-arrow {
+  position: absolute;
+  top: -50px; /* Move to top */
+  font-size: 18px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 1000;
+  background: white;
+  padding: 5px;
+  border-radius: 70%;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
+}
+
+.custom-prev {
+  right: 50px; /* Left arrow next to right arrow */
+  padding-left: 7px;
+}
+
+.custom-next {
+  right: 8px; /* Right arrow stays at the right */
+  padding-left: 8px;
+}
+@layer utilities {
+  @keyframes glow-once {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+
+  .animate-glow-once {
+    animation: glow-once 0.7s ease-in-out forwards;
+  }
+
+  .animate-none {
+    animation: none !important;
+  }
+}
