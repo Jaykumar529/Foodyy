@@ -1,19 +1,26 @@
+Welcome to Foodyy — a modern, responsive, and user-friendly food ordering web application built with the latest web technologies. From delicious meals to lightning-fast orders, Foodyy brings your favorite food to your doorstep in just a few clicks.
 
-for hash password use = bcrypt
+✨ Features
+🍔 Browse diverse categories of food
+
+🔍 Smart search for dishes and restaurants
+
+🛒 Add to cart and place orders seamlessly
+
+👤 User authentication (Login/Signup)
+
+💳 Stripe payment integration
+
+🔐 Secured routes and .env configuration
 
 
-mongo local
-Image_db and collection name is gallaries
-
-
-library
-multer
-
-
-third-party website
-cloudinary for storage
+-> For hash password use => bcrypt
+-> mongo local
+-> multer
+-> cloudinary for storage
 
 
 
-path 
-/upload-images(post) -> uploadMultiple(call middleware function) -> key extract in images (from imageuploader.js)
+path -> /upload-images(post) -> uploadMultiple(call middleware function) -> key extract in images (from imageuploader.js)
+
+<!-- (Add all details in .env file) -->
